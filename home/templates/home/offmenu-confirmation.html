@@ -231,9 +231,9 @@
 
                 let handler = PaystackPop.setup({
 
-                    key: 'pk_test_bb3b6c272b58c9e8c496262409a2b77d28c52336', // Replace with your public key
+                    key: 'pk_live_d818c44f29a28aa5645d4e9aec5701ae734b9053', // Replace with your public key
 
-                    email: 'saviourbazi2021@gmail.com',
+                    email: '{{ request.user.email }}',
 
                     amount: {{ offmenu_food_detail.meal_amount }} * 100,
 
