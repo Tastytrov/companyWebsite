@@ -1,0 +1,1764 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Tron</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'assets/images/logo/favicon.ico' %}"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="overlay" data-overlay></div>
+
+    <!--
+    - MODAL
+  -->
+
+    <!--
+    - NOTIFICATION TOAST
+  -->
+
+    <!--
+    - HEADER
+  -->
+
+    <header>
+      <div class="header-main">
+        <div class="container">
+          <a href="#" class="header-logo">
+            <img
+              src="{% static 'assets/images/logo/logo.svg' %}"
+              alt="Anon's logo"
+              width="120"
+              height="36"
+            />
+          </a>
+
+  
+        </div>
+      </div>
+
+      <nav class="desktop-navigation-menu">
+        <div class="container">
+          <ul class="desktop-menu-category-list">
+     
+
+       
+
+            <li class="menu-category">
+              <a href="#home" class="menu-title">Home</a>
+
+         
+            </li>
+            <li class="menu-category">
+              <a href="#" class="menu-title">dishes</a>
+
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="#">fried rice</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Jollof Rice</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Spaghetti </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Beans and bread</a>
+                </li>
+
+               
+              </ul>
+            </li>
+
+            <li class="menu-category">
+              <a href="#" class="menu-title">Sharwama</a>
+
+              <ul class="dropdown-list">
+                <li class="dropdown-item">
+                  <a href="#">Beef</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Chicken</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Beef & Chicken</a>
+                </li>
+
+           
+              </ul>
+            </li>
+
+            <li class="menu-category">
+              <a href="#" class="menu-title">Swallow</a>
+
+              <ul class="dropdown-list">
+                
+                <li class="dropdown-item">
+                  <a href="#">Eba with Afang</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Melon soup with fufu</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Vegetable Soup</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-category">
+              <a href="#" class="menu-title">Icecream</a>
+
+              <ul class="dropdown-list">
+                
+                <li class="dropdown-item">
+                  <a href="#">Chocolate</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Strawberry</a>
+                </li>
+
+                <li class="dropdown-item">
+                  <a href="#">Vanilla</a>
+                </li>
+              </ul>
+            </li>
+
+        
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mobile-bottom-navigation">
+        <button class="action-btn" data-mobile-menu-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+     
+
+        <button class="action-btn">
+         <a href="#home"><ion-icon name="home-outline" ></ion-icon></a> 
+        </button>
+
+
+   
+      </div>
+
+      <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+        <div class="menu-top">
+          <h2 class="menu-title">Menu</h2>
+
+          <button class="menu-close-btn" data-mobile-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="mobile-menu-category-list">
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Swallow</p>
+
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Afang and egba</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">melon and fufu</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">okroa and fufu</a>
+              </li>
+
+          
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Dishes</p>
+
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Fried Rice</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Jollof Rice</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Spaghetti</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Beans And Bread</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Sharwama</p>
+
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Beef</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Chicken</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Beef and</a>
+              </li>
+
+            
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Icecream</p>
+
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Chocolate</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Strawberry</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Vanilla</a>
+              </li>
+
+         
+            </ul>
+          </li>
+
+       
+        </ul>
+
+        <div class="menu-bottom">
+        
+
+          <ul class="menu-social-container">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--
+    - MAIN
+  -->
+
+    <main>
+      <!--
+      - BANNER
+    -->
+
+      <div class="banner" id="home">
+        <div class="container">
+          <div class="slider-container">
+            <div class="slider-item active">
+              <img
+                src="{% static 'assets/images/banner-1.jpg' %}"
+                alt="women's latest fashion sale"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Trending Food</p>
+
+                <h2 class="banner-title">stay home & get your daily need's</h2>
+
+                <p class="banner-text">starting at &dollar; <b>20</b>.00</p>
+
+                <a href="#"  class="banner-btn">order now</a>
+
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="{% static 'assets/images/banner-2.jpg' %}"
+                alt="modern sunglasses"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">free Deliver</p>
+
+                <h2 class="banner-title">Modern Dishes</h2>
+
+                <p class="banner-text">starting at &dollar; <b>15</b>.00</p>
+
+                <a href="#" class="banner-btn">order now</a>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="{% static 'assets/images/banner-3.jpg' %}"
+                alt="modern sunglasses"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">free Deliver</p>
+
+                <h2 class="banner-title">Modern Dishes</h2>
+
+                <p class="banner-text">starting at &dollar; <b>15</b>.00</p>
+
+                <a href="#" class="banner-btn">order now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CATEGORY -->
+
+ 
+      <!--
+      - PRODUCT
+    -->
+
+      <div class="product-container">
+        <div class="container">
+          <!--
+          - SIDEBAR
+        -->
+
+        
+
+          <div class="product-box">
+            <!--
+            - PRODUCT MINIMAL
+          -->
+  <div class="product-main">
+              <h2 class="title">Menu</h2>
+          <div class="product-grid">
+            
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-2.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-2_1.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Okroa</h3>
+
+          
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                  
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-2.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-2_1.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Okroa</h3>
+
+          
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                  
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/watch-3.jpg' %}"
+                      alt="Pocket Watch Leather Pouch"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/watch-4.jpg' %}"
+                      alt="Pocket Watch Leather Pouch"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Melon</h3>
+
+         
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/watch-1.jpg' %}"
+                      alt="Smart watche Vital Plus"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/watch-2.jpg' %}"
+                      alt="Smart watche Vital Plus"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon</a>
+
+                  
+
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="product-grid">
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/party-wear-1.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/party-wear-2.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Afang soup</a>
+
+                  
+
+                  
+
+                    <div class="psport-box">
+                      <p class="psport">N25.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/party-wear-1.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/party-wear-2.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Afang soup</a>
+
+                  
+
+                  
+
+                    <div class="psport-box">
+                      <p class="psport">N25.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/jacket-1.jpg' %}"
+                      alt="Mens Winter Leathers Jackets"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/jacket-2.jpg' %}"
+                      alt="Mens Winter Leathers Jackets"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+           
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Rice</h3>
+
+                 
+             
+
+                    <div class="psport-box">
+                      <p class="psport">N100.00</p>
+               
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/sports-2.jpg' %}"
+                      alt="Trekking & Running Shoes - black"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/sports-4.jpg' %}"
+                      alt="Trekking & Running Shoes - black"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Rice</h3>
+
+                  
+               
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+</div>
+<div class="product-grid">
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-1.jpg' %}"
+                      alt="Men's Leather soup Wear shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-1_1.jpg' %}"
+                      alt="Men's Leather soup Wear shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                 
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">soup</h3>
+
+                 
+
+       
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static  'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static  'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+             </div>
+         
+            <!--
+            - PRODUCT FEATURED
+          -->
+
+               <div class="product-featured">
+              <h2 class="title">Weekend   Deals</h2>
+
+              <div class="showcase-wrapper has-scrollbar">
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="{% static 'assets/images/products/shampoo.jpg' %}"
+                        alt="shampoo, conditioner & facewash packs"
+                        class="showcase-img" />
+                    </div>
+
+                    <div class="showcase-content">
+                   
+
+                      <a href="#">
+                        <h3 class="showcase-title">
+                         AFANG AND FUFU
+                        </h3>
+                      </a>
+
+                      <p class="showcase-desc">
+                        Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                        dolor sit amet consectetur Lorem ipsum dolor
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">N1500.00</p>
+
+                      </div>
+
+                      <button class="add-cart-btn">add to cart</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>already sold: <b>20</b></p>
+
+                          <p>available: <b>40</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">360</p>
+
+                            <p class="display-text">Days</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">24</p>
+                            <p class="display-text">Hours</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">59</p>
+                            <p class="display-text">Min</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">00</p>
+                            <p class="display-text">Sec</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase-container">
+                  <div class="showcase">
+                    <div class="showcase-banner">
+                      <img
+                        src="{% static 'assets/images/products/jewellery-1.jpg' %}"
+                        alt="Rose Gold diamonds Earring"
+                        class="showcase-img" />
+                    </div>
+
+                    <div class="showcase-content">
+                   
+
+                      <h3 class="showcase-title">
+                        <a href="#" class="showcase-title"
+                          >MELON SOUP</a
+                        >
+                      </h3>
+
+                      <p class="showcase-desc">
+                        Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                        dolor sit amet consectetur Lorem ipsum dolor
+                      </p>
+
+                      <div class="price-box">
+                        <p class="price">N1990.00</p>
+                        <del>N2000.00</del>
+                      </div>
+
+                      <button class="add-cart-btn">add to cart</button>
+
+                      <div class="showcase-status">
+                        <div class="wrapper">
+                          <p>already sold: <b>15</b></p>
+
+                          <p>available: <b>40</b></p>
+                        </div>
+
+                        <div class="showcase-status-bar"></div>
+                      </div>
+
+                      <div class="countdown-box">
+                        <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                        <div class="countdown">
+                          <div class="countdown-content">
+                            <p class="display-number">360</p>
+                            <p class="display-text">Days</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">24</p>
+                            <p class="display-text">Hours</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">59</p>
+                            <p class="display-text">Min</p>
+                          </div>
+
+                          <div class="countdown-content">
+                            <p class="display-number">00</p>
+                            <p class="display-text">Sec</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <!--
+            - PRODUCT GRID
+          -->
+
+            <div class="product-main">
+              <h2 class="title">Menu</h2>
+          <div class="product-grid">
+            
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-2.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-2_1.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Okroa</h3>
+
+          
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                  
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-2.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-2_1.jpg' %}"
+                      alt="Okroa Men's Brown shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Okroa</h3>
+
+          
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                  
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/watch-3.jpg' %}"
+                      alt="Pocket Watch Leather Pouch"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/watch-4.jpg' %}"
+                      alt="Pocket Watch Leather Pouch"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon</a>
+
+         
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/watch-1.jpg' %}"
+                      alt="Smart watche Vital Plus"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/watch-2.jpg' %}"
+                      alt="Smart watche Vital Plus"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon</a>
+
+                  
+
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="product-grid">
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/party-wear-1.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/party-wear-2.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Afang soup</a>
+
+                  
+
+                  
+
+                    <div class="psport-box">
+                      <p class="psport">N25.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/party-wear-1.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/party-wear-2.jpg' %}"
+                      alt="Womens Party Wear Shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+             
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Afang soup</a>
+
+                  
+
+                  
+
+                    <div class="psport-box">
+                      <p class="psport">N25.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/jacket-1.jpg' %}"
+                      alt="Mens Winter Leathers Jackets"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/jacket-2.jpg' %}"
+                      alt="Mens Winter Leathers Jackets"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+           
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Rice</h3>
+
+                 
+             
+
+                    <div class="psport-box">
+                      <p class="psport">N100.00</p>
+               
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/sports-2.jpg' %}"
+                      alt="Trekking & Running Shoes - black"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/sports-4.jpg' %}"
+                      alt="Trekking & Running Shoes - black"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  
+                  </div>
+
+                  <div class="showcase-content">
+                    <h3 class="showcase-category">Rice</h3>
+
+                  
+               
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+</div>
+<div class="product-grid">
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shoe-1.jpg' %}"
+                      alt="Men's Leather soup Wear shoes"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shoe-1_1.jpg' %}"
+                      alt="Men's Leather soup Wear shoes"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                 
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">soup</a>
+
+                 
+
+       
+
+                    <div class="psport-box">
+                      <p class="psport">N1000.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="{% static 'assets/images/products/shorts-1.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img default"
+                      width="300"
+                    />
+                    <img
+                      src="{% static 'assets/images/products/shorts-2.jpg' %}"
+                      alt="Better Basics French Terry Sweatshorts"
+                      class="product-img hover"
+                      width="300"
+                    />
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Melon soup</a>
+
+              
+                 
+
+                    <div class="psport-box">
+                      <p class="psport">N78.00</p>
+                      <button onclick="togglePopup()" class="banner-btn"> Order</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+      <div>
+        <div class="container">
+          <div class="testimonials-box">
+            <!--
+            - TESTIMONIALS
+          -->
+
+            <div class="testimonial">
+              <h2 class="title">testimonial</h2>
+
+              <div class="testimonial-card">
+                <img
+                  src="{% static 'assets/images/testimonial-1.jpg' %}"
+                  alt="alan doe"
+                  class="testimonial-banner"
+                  width="80"
+                  height="80"
+                />
+
+                <p class="testimonial-name">Koksi</p>
+
+                <p class="testimonial-title">CEO & Founder Invision</p>
+
+                <img
+                  src="{% static 'assets/images/icons/quotes.svg' %}"
+                  alt="quotation"
+                  class="quotation-img"
+                  width="26"
+                />
+
+                <p class="testimonial-desc">
+                  Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor
+                  sit amet.
+                </p>
+              </div>
+            </div>
+
+            <!--
+            - CTA
+          -->
+
+            <div class="cta-container">
+              <img
+                src="{% static 'assets/images/cta-banner.jpg' %}"
+                alt="summer collection"
+                class="cta-banner"
+              />
+
+              <a href="#" class="cta-content">
+                <p class="discount">25% Discount</p>
+
+              <h2 class="cta-title">For our loyal costoumers</h2>
+
+                <p class="cta-text">Starting @ N1000</p>
+
+                <button class="cta-btn">order now</button>
+              </a>
+            </div>
+
+            <!--
+            - SERVICE
+          -->
+
+            <div class="service">
+              <h2 class="title">Our Services</h2>
+
+              <div class="service-container">
+                <a href="#" class="service-item">
+                  <div class="service-icon">
+                    <ion-icon name="boat-outline"></ion-icon>
+                  </div>
+
+                  <div class="service-content">
+                    <h3 class="service-title">our Working Hour</h3>
+                    <p class="service-desc">Hours: 8AM - 11PM</p>
+                  </div>
+                </a>
+
+            
+                <a href="#" class="service-item">
+                  <div class="service-icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </div>
+
+                  <div class="service-content">
+                    <h3 class="service-title">Call us @</h3>
+                    <p class="service-desc">08051217437</p>
+                  </div>
+                </a>
+
+                <a href="#" class="service-item">
+                  <div class="service-icon">
+                    <ion-icon name="arrow-undo-outline"></ion-icon>
+                  </div>
+
+                  <div class="service-content">
+                    <h3 class="service-title">Return Policy</h3>
+                    <p class="service-desc">Easy & Free Return</p>
+                  </div>
+                </a>
+
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      - BLOG
+    -->
+ <!-- Button to trigger the pop-up model -->
+
+ <!-- Pop-up model -->
+  <!-- Pop-up model -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <div style="display: flex;">
+        <h2>Order Form</h2>
+        <span onclick="togglePopup()" style="cursor: pointer; padding-left: 100px;">
+          <i class="material-icons">close</i>
+        </span>
+      </div>
+      
+      
+
+      <form style="padding-top: 20px;">
+        <label for="food">Food:</label>
+        <select id="food" name="food" required>
+          <option value="Afang">Afang</option>
+          <option value="Melon">Melon</option>
+          <option value="Okroa">Okroa</option>
+          <option value="Jollof rice">Jollof rice</option>
+          <option value="fried rice">fried rice</option>
+          <!-- Add more options as needed -->
+        </select>
+        <label for="quantity">Quantity:</label>
+        <div class="quantity-buttons">
+          <button type="button" onclick="decreaseQuantity()">-</button>
+          <button type="number" id="quantity" name="quantity" value="1">1</button>
+          <button type="button" onclick="increaseQuantity()">+</button>
+        </div>
+        
+  
+        
+  
+    
+        <p>Price: <span id="price">1000</span></p>
+
+        <label>Bottle Water:</label>
+        <div class="radio-container">
+          <input type="radio" id="water-yes" name="water" value="yes">
+          <label for="water-yes">Yes</label>
+          <input type="radio" id="water-no" name="water" value="no">
+          <label for="water-no">No</label>
+        </div>
+        <label>extra:</label>
+        <div class="radio-container">
+          <input type="checkbox" id="extra" name="extra" value="Garri">
+<label for="swallow-type2">Garri</label>
+
+          <input type="checkbox" id="extra" name="extra" value="Soup">
+<label for="swallow-type3">Soup</label>
+
+        </div>
+        
+        <label>Swallow:</label>
+        <div class="radio-container">
+          <input type="radio" id="swallow-type1" name="swallow-type" value="fufu">
+          <label for="swallow-type1">Fufu</label>
+          <input type="radio" id="swallow-type2" name="swallow-type" value="Garri">
+          <label for="swallow-type2">Garri</label>
+        </div>
+        
+
+
+        
+        <label>Payment Method:</label>
+        <div class="radio-container">
+          <input type="radio" id="payment-method1" name="payment-method" value="2403164705">
+          <label for="payment-method1">Account-number</label>
+          <input type="radio" id="payment-method2" name="payment-method" value="paystack">
+          <label for="payment-method2">Paystack</label>
+        </div>
+        
+  
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+  </div>
+
+     <!-- modal for check out -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="headerorder">
+      <h2>Order Summary</h2>
+      <span onclick="sub()" style="cursor: pointer; padding-left: 100px;">
+        <i class="material-icons">close</i>
+      </span>
+    </div>
+
+    <p id="food-summary"></p>
+    <p id="quantity-summary"></p>
+    <p id="water-summary"></p>
+    <p id="swallow-summary"></p>
+    <p id="extra-summary"></p> <!-- Add a new paragraph for the Extra section -->
+    <p id="payment-summary"></p>
+    <div class="btn">
+      <div class="order-button">
+        <i class="material-icons">shopping_cart</i>order
+      </div>
+      <div id="print-button">Print</div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <!--
+    - FOOTER
+  -->
+
+    <footer>
+     
+
+      <div class="footer-nav">
+        <div class="container">
+        
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">menu</h2>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Afang soup</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Indomie</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Rice</a>
+            </li>
+
+      
+          </ul>
+
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Our Company</h2>
+            </li>
+
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Delivery</a>
+            </li>
+
+    
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">About us</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Secure payment</a>
+            </li>
+          </ul>
+
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Services</h2>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Psports drop</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">New products</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Best sales</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Contact us</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Sitemap</a>
+            </li>
+          </ul>
+
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Contact</h2>
+            </li>
+
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <address class="content">
+               Late Elder (Chief A.B Udo's Compound),After Salvation Ministries, Uyo R, Ikot Akpaden
+              </address>
+            </li>
+
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+607936-8058" class="footer-nav-link"
+                >08051217437</a
+              >
+            </li>
+
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="mailto:ufotgodspower8@gmail.com" class="footer-nav-link"
+                >example@gmail.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Follow Us</h2>
+            </li>
+
+            <li>
+              <ul class="social-link">
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+   
+
+          <p class="copyright">
+            Copyright &copy; <a href="#"> Tasty Tron</a> all rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--
+    - custom js link
+  -->
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+    
