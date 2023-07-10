@@ -28,12 +28,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$pui14b+)b)^$=nkb@=yrsjzx!&mmd&xrr4^46e*wlr@$^56_r'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', "tastytrov.onrender.com"]
+
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1", "hhttps://tastytrov.onrender.com"]
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
 
 
 # Application definition
@@ -92,6 +98,8 @@ WSGI_APPLICATION = 'koksiTrove.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+DATABASE_URL = config('DATABASE_URL')
+
 if DEBUG:
     DATABASES = {
         'default': {
@@ -101,7 +109,7 @@ if DEBUG:
     }
 else:
     DATABASES = {
-    "default": dj_database_url.parse("postgres://tastytrov_user:YK78tDb3AfYJzGi8WQEzhXksbKlhJWVB@dpg-ciljihtgkuvinfl8e820-a.oregon-postgres.render.com/tastytrov"),
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
 
 
@@ -160,7 +168,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # adding config
 cloudinary.config( 
-  cloud_name = "duzmvqqyz", 
-  api_key = "374936293835133", 
-  api_secret = "Wbf7dBJeWXL3m7yGzzX2666Z-Hg",
+  cloud_name = config('CLOUD_NAME'), 
+  api_key = config('API_KEY'), 
+  api_secret = config('API_SECRET'),
 )
